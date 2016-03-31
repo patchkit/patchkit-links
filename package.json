@@ -4,6 +4,7 @@
   "description": "React UI components for links to SSB objects",
   "main": "index.jsx",
   "dependencies": {
+    "patchkit-util": "^1.0.0",
     "react": "^0.14.6"
   },
   "devDependencies": {
@@ -13,7 +14,8 @@
     "babel-preset-stage-0": "^6.3.13",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
-    "less": "^2.5.3"
+    "less": "^2.5.3",
+    "patchkit-fixtures": "^1.0.0"
   },
   "scripts": {
     "build": "npm run build-js & npm run build-css",
