@@ -9,7 +9,7 @@ export class UserLink extends React.Component {
   render() {
     const name = this.context.users.names[this.props.id] || u.shortString(this.props.id, 6)
     const label = (this.props.shorten) ? name.slice(0, 3) : name
-    return <a href={this.context.toUrl(this.props.id)} className="user-link" title={name}>{label}</a>
+    return <a href={this.context.toUrl(this.props.id)}  className={this.props.className||"user-link"} title={name}>{label}</a>
   }
 }
 
@@ -18,7 +18,7 @@ export class MsgLink extends React.Component {
     toUrl: React.PropTypes.func
   }
   render() {
-    return <a href={this.context.toUrl(this.props.id)}>{this.props.children||this.props.name||this.props.id}</a>
+    return <a href={this.context.toUrl(this.props.id)} className={this.props.className}>{this.props.children||this.props.name||this.props.id}</a>
   }
 }
 
@@ -27,7 +27,7 @@ export class BlobLink extends React.Component {
     toUrl: React.PropTypes.func
   }
   render() {
-    return <a href={this.context.toUrl(this.props.id)}>{this.props.children||this.props.name||this.props.id}</a>
+    return <a href={this.context.toUrl(this.props.id)} className={this.props.className}>{this.props.children||this.props.name||this.props.id}</a>
   }
 }
 
