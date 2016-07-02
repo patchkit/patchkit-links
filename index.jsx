@@ -1,5 +1,6 @@
 import React from 'react'
 import * as u from 'patchkit-util'
+import t from 'patchwork-translations'
 
 export class UserLink extends React.Component {
   static contextTypes = {
@@ -56,7 +57,7 @@ export class UserLinks extends React.Component {
         return <span key={id} ><UserLink id={id} shorten={this.props.shorten} />{isLast ? '' : ', '}</span>
       })}
       {overLimitNames
-        ? <span className="hint--top" data-hint={overLimitNames}> and {nOver} other{u.plural(nOver)}</span>
+        ? <span className="hint--top" data-hint={overLimitNames}> {t('namesAndOthers', nOver)}</span>
         : '' }
     </span>
   }
@@ -97,7 +98,7 @@ export class UserPics extends React.Component {
     return <span>
       {ids.map((id, i) => <UserPic id={id} key={`pic-${i}`} hovertips={this.props.hovertips} />)}
       {overLimitNames
-        ? <span className="hint--top" data-hint={overLimitNames}> and {nOver} other{u.plural(nOver)}</span>
+        ? <span className="hint--top" data-hint={overLimitNames}> {t('namesAndOthers', nOver)}</span>
         : '' }
     </span>
   }
